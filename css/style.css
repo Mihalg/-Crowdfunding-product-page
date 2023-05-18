@@ -1,0 +1,770 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+ul,
+ol {
+	list-style-type: none;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: 'Commissioner', sans-serif;
+	height: 60%;
+}
+
+.active__menu {
+	overflow-y: hidden;
+}
+
+.btn {
+	padding: 2rem 4rem;
+	font-size: 1.5rem;
+	width: 100%;
+	color: #fff;
+	background-color: hsl(176, 50%, 47%);
+	border: none;
+	border-radius: 60px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.btn:hover,
+.btn:focus {
+	background-color: hsl(176, 72%, 28%);
+	outline: none;
+}
+
+.heading {
+	font-size: 2.4rem;
+	font-weight: bold;
+	margin-bottom: 2rem;
+}
+
+.heading-small {
+	font-size: 1.8rem;
+	font-weight: bold;
+}
+
+.info {
+	font-size: 1.4rem;
+	line-height: 1.8;
+	color: hsl(0, 0%, 48%);
+}
+
+.pledge {
+	font-size: 1.4rem;
+	color: hsl(176, 50%, 47%);
+	font-weight: bold;
+}
+
+.reward-left {
+	display: inline-block;
+	font-size: 1.4rem;
+	height: 100%;
+	color: hsl(0, 0%, 48%);
+}
+
+.reward-number {
+	display: inline-block;
+	font-size: 2.8rem;
+	font-weight: bold;
+}
+
+header .menu {
+	display: flex;
+	justify-content: space-between;
+}
+
+header .menu .logo {
+	z-index: 15;
+	-o-object-fit: contain;
+	object-fit: contain;
+	padding: 2rem;
+}
+
+header .menu__desktop {
+	display: none;
+}
+
+header .menu__container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.329);
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.526) 0%, rgba(0, 0, 0, 0.635) 85%);
+	pointer-events: none;
+	opacity: 0;
+	transition: opacity 0.3s;
+	z-index: 10;
+}
+
+header .menu__mobile {
+	position: fixed;
+	top: 7rem;
+	left: 6%;
+	right: 6%;
+	background-color: #fff;
+	border-radius: 8px;
+}
+
+header .menu__mobile li:nth-child(2) {
+	border-top: 1px solid hsl(0, 0%, 48%);
+	border-bottom: 1px solid hsl(0, 0%, 48%);
+}
+
+header .menu__mobile a {
+	display: block;
+	padding: 2rem 1rem;
+	text-decoration: none;
+	color: #000;
+	font-weight: 700;
+	font-size: 1.6rem;
+}
+
+header .menu__icon {
+	display: none;
+	-o-object-fit: contain;
+	object-fit: contain;
+	padding: 2rem;
+	z-index: 25;
+	cursor: pointer;
+}
+
+header .active__menu {
+	opacity: 1;
+	pointer-events: auto;
+	z-index: 20;
+}
+
+header .active__icon {
+	display: block;
+}
+
+header picture {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	width: 100%;
+}
+
+header picture img {
+	width: 100%;
+	-o-object-fit: cover;
+	object-fit: cover;
+}
+
+main {
+	padding: 0 20px;
+	margin-top: 40%;
+}
+
+.intro {
+	position: relative;
+	padding: 3rem 2rem;
+	background-color: #fff;
+	text-align: center;
+	border-radius: 12px;
+	box-shadow: 0px 0px 8px -3px rgb(64, 64, 68);
+}
+
+.intro__logo {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.intro h1 {
+	margin-top: 2rem;
+}
+
+.intro__info {
+	margin: 1.6rem 0 4rem;
+}
+
+.intro__btns {
+	display: flex;
+	gap: 1rem;
+	max-height: 56px;
+}
+
+.intro__btn {
+	padding: 2rem 4rem;
+	font-size: 1.6rem;
+	width: 100%;
+	color: #fff;
+	background-color: hsl(176, 50%, 47%);
+	border: none;
+	border-radius: 60px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.intro__btn:hover {
+	background-color: hsl(176, 72%, 28%);
+}
+
+.intro__bookmark {
+	font-size: 1.6rem;
+	background-color: #f3f3f3;
+	border: none;
+	border-radius: 60px;
+	cursor: pointer;
+	transition: color 0.3s;
+}
+
+.intro__bookmark p {
+	display: none;
+	flex-grow: 1;
+}
+
+.intro__bookmark circle,
+.intro__bookmark path {
+	transition: fill 0.3s;
+}
+
+.intro .bookmarked {
+	color: hsl(176, 72%, 28%);
+	fill: hsl(176, 72%, 28%);
+}
+
+.intro .bookmarked--path {
+	fill: white;
+}
+
+.stats {
+	margin: 3rem 0;
+	padding: 3rem 2rem;
+	background-color: #fff;
+	text-align: center;
+	border-radius: 12px;
+	box-shadow: 0px 0px 8px -3px rgb(64, 64, 68);
+}
+
+.stats hr {
+	width: 20%;
+	margin: 0 auto;
+}
+
+.stats__section {
+	padding: 1.4rem;
+}
+
+.stats__heading {
+	font-size: 3.2rem;
+	font-weight: bold;
+	margin-bottom: 0.8rem;
+}
+
+.stats .progress-bar {
+	position: relative;
+	height: 15px;
+	margin-top: 2rem;
+	overflow: hidden;
+}
+
+.stats .progress-bar__max,
+.stats .progress-bar__filled {
+	position: absolute;
+	width: 100%;
+	height: 15px;
+	border-radius: 16px;
+	background-color: #f3f3f3;
+}
+
+.stats .progress-bar__filled {
+	width: 89%;
+	max-width: 100%;
+	background-color: hsl(176, 50%, 47%);
+}
+
+.about {
+	padding: 3rem 2rem;
+	margin-bottom: 4rem;
+	background-color: #fff;
+	border-radius: 12px;
+	box-shadow: 0px 0px 8px -3px rgb(64, 64, 68);
+}
+
+.about__info {
+	margin: 1.5rem 0;
+}
+
+.about .reward {
+	border: 1.5px solid #eaeaea;
+	padding: 1.2rem;
+	border-radius: 12px;
+	margin: 3rem 0 0;
+}
+
+.about .reward--off {
+	filter: grayscale(100%);
+	opacity: 0.5;
+	pointer-events: none;
+}
+
+.about .reward__header {
+	margin-bottom: 1.5rem;
+}
+
+.about .reward .heading-small {
+	margin-bottom: 0.5rem;
+}
+
+.about .reward .btn {
+	width: 60%;
+	padding: 1rem 0;
+}
+
+.about .reward__select {
+	margin-top: 1.5rem;
+}
+
+.about .reward__select div {
+	display: flex;
+	align-items: center;
+	gap: 0.8rem;
+}
+
+.about .reward-left {
+	margin-bottom: 1.5rem;
+}
+
+.about .reward-number {
+	margin-bottom: 1.5rem;
+}
+
+.modal-container {
+	display: none;
+}
+
+.container {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	align-items: center;
+	padding: 0 20px;
+	width: 100%;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.329);
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.526) 0%, rgba(0, 0, 0, 0.635) 85%);
+	z-index: 30;
+}
+
+.container-active {
+	display: flex;
+}
+
+.container .modal {
+	position: relative;
+	width: 100%;
+	height: 90%;
+	max-width: 1000px;
+	padding: 3rem 2rem;
+	margin: auto;
+	background-color: #fff;
+	border-radius: 12px;
+	overflow-y: scroll;
+}
+
+.container .modal__close {
+	position: absolute;
+	top: 3rem;
+	right: 2rem;
+	transform: translateY(50%);
+	cursor: pointer;
+}
+
+.container .modal__reward {
+	position: relative;
+	border: 1.5px solid #eaeaea;
+	padding: 2rem;
+	border-radius: 12px;
+	margin: 3rem 0 0;
+}
+
+.container .modal__reward-active {
+	border: 1.5px solid hsl(176, 72%, 28%);
+}
+
+.container .modal__reward .info {
+	margin: 2rem 0;
+}
+
+.container .modal__reward--off {
+	filter: grayscale(100%);
+	opacity: 0.5;
+	pointer-events: none;
+}
+
+.container .modal__reward .heading-small {
+	transition: color 0.3s;
+}
+
+.container .modal__reward:hover .heading-small {
+	color: hsl(176, 72%, 28%);
+}
+
+.container .modal__header {
+	margin-left: 4rem;
+}
+
+.container .modal__selection {
+	position: relative;
+	display: flex;
+}
+
+.container .modal__selection input {
+	display: none;
+}
+
+.container .modal__selection input:checked + span::before {
+	transform: scale(1);
+}
+
+.container .modal__selection span {
+	display: block;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	height: 25px;
+	width: 25px;
+	border: 1px solid #eaeaea;
+	border-radius: 50%;
+	transform: translateY(-50%);
+}
+
+.container .modal__selection span::before {
+	content: '';
+	height: 12.5px;
+	width: 12.5px;
+	background-color: hsl(176, 72%, 28%);
+	border-radius: 50%;
+	transform: scale(0);
+	transition: transform 0.3s;
+}
+
+.container .modal__selection .pledge {
+	margin-top: 0.5rem;
+}
+
+.container .modal__rewards-left {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.container .modal__enter-pledge {
+	display: none;
+	border-top: 1px solid #eaeaea;
+	margin-top: 2rem;
+	text-align: center;
+}
+
+.container .modal__enter-pledge-active {
+	display: block;
+}
+
+.container .modal__enter-pledge .pledge-form {
+	display: flex;
+	justify-content: center;
+	gap: 2rem;
+}
+
+.container .modal__enter-pledge .pledge-form .input-container {
+	position: relative;
+}
+
+.container .modal__enter-pledge .pledge-form .input-container input {
+	width: 100%;
+	max-width: 150px;
+	padding: 1.5rem;
+	font-size: 1.8rem;
+	font-weight: bold;
+	border: 1px solid #eaeaea;
+	border-radius: 40px;
+	text-align: center;
+}
+
+.container .modal__enter-pledge .pledge-form .input-container input:focus,
+.container .modal__enter-pledge .pledge-form .input-container input:active {
+	outline-color: hsl(176, 72%, 28%);
+}
+
+.container .modal__enter-pledge .pledge-form .input-container span {
+	position: absolute;
+	top: 47%;
+	left: 20%;
+	font-size: 1.4rem;
+	color: hsl(0, 0%, 48%);
+	transform: translate(-50%, -50%);
+}
+
+.container .modal__enter-pledge .pledge-form .btn {
+	padding: 1rem 2rem;
+}
+
+.confirm-container {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	height: 100vh;
+	padding: 0 20px;
+	align-items: center;
+	background: rgba(0, 0, 0, 0.329);
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.526) 0%, rgba(0, 0, 0, 0.635) 85%);
+	z-index: 30;
+	display: none;
+}
+
+.confirm-container-active {
+	display: flex;
+}
+
+.confirm-container .confirm-modal {
+	width: 100%;
+	margin: 0 auto;
+	padding: 4rem;
+	background-color: #fff;
+	border-radius: 12px;
+	text-align: center;
+}
+
+.confirm-container .confirm-modal img {
+	margin-bottom: 2.5rem;
+}
+
+.confirm-container .confirm-modal .heading-small {
+	margin-bottom: 1rem;
+}
+
+.confirm-container .confirm-modal .info {
+	margin-bottom: 2rem;
+}
+
+.confirm-container .confirm-modal .btn {
+	padding: 1.5rem 3rem;
+}
+
+.attribution{
+	text-align: center;
+	padding: 1rem;
+}
+
+@media (min-width: 48em) {
+	.reward-left {
+		display: inline-block;
+		font-size: 1.4rem;
+		height: 100%;
+		color: hsl(0, 0%, 48%);
+	}
+
+	.reward-number {
+		display: inline-block;
+		font-size: 2.2rem;
+		font-weight: bold;
+	}
+
+	header .menu {
+		width: 100%;
+		max-width: 1000px;
+		margin: 0 auto;
+	}
+
+	header .menu__icon {
+		display: none;
+	}
+
+	header .menu__desktop {
+		display: block;
+		display: flex;
+		gap: 2rem;
+		padding-right: 2rem;
+	}
+
+	header .menu__desktop a {
+		display: block;
+		position: relative;
+		padding: 2rem 1rem;
+		color: #fff;
+		text-decoration: none;
+		font-size: 1.6rem;
+	}
+
+	header .menu__desktop a::before {
+		content: '';
+		position: absolute;
+		bottom: 15px;
+		left: 0;
+		background-color: hsl(176, 50%, 47%);
+		height: 4px;
+		width: 100%;
+		transform: scaleX(0);
+		transform-origin: right;
+		transition: transform 0.3s;
+	}
+
+	header .menu__desktop a:hover::before,
+	header .menu__desktop a:focus::before {
+		transform: scaleX(1);
+		transform-origin: left;
+	}
+
+	main {
+		width: 100%;
+		max-width: 800px;
+		margin: 0 auto;
+		margin-top: 15%;
+	}
+
+	.intro {
+		padding: 3rem 4rem;
+	}
+
+	.intro__bookmark {
+		width: 30%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 2rem;
+		padding-right: 2.5rem;
+		color: hsl(0, 0%, 48%);
+		font-weight: bold;
+	}
+
+	.intro__bookmark p {
+		display: block;
+	}
+
+	.intro__btns {
+		justify-content: space-between;
+	}
+
+	.btn {
+		width: auto;
+	}
+
+	.stats {
+		text-align: left;
+		padding: 4rem 4rem;
+	}
+
+	.stats .stats-text {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.stats hr {
+		display: none;
+	}
+
+	.stats__section {
+		width: 33%;
+	}
+
+	.stats__section:not(:first-child) {
+		padding: 1rem 4rem;
+	}
+
+	.stats__section:nth-child(3) {
+		border-right: 2px solid #b1b1b1;
+		border-left: 2px solid #b1b1b1;
+	}
+
+	.about {
+		padding: 3rem 4rem;
+	}
+
+	.about .reward {
+		padding: 2rem;
+	}
+
+	.about .reward__header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 1rem;
+	}
+
+	.about .reward__select {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-top: 2rem;
+	}
+
+	.about .reward__btn {
+		width: 25%;
+	}
+
+	.container .modal {
+		padding: 4rem;
+	}
+
+	.container .modal__close {
+		top: 4rem;
+		right: 4rem;
+	}
+
+	.container .modal__reward {
+		padding: 3rem;
+		padding-bottom: 1rem;
+	}
+
+	.container .modal__reward .info {
+		margin-left: 5rem;
+	}
+
+	.container .modal__header {
+		display: flex;
+		align-items: center;
+		gap: 2rem;
+		margin-left: 5rem;
+	}
+
+	.container .modal__header .pledge {
+		margin: 0;
+	}
+
+	.container .modal__rewards-left {
+		position: absolute;
+		top: 2.5rem;
+		right: 3rem;
+	}
+
+	.container .modal__enter-pledge {
+		display: none;
+		justify-content: space-between;
+		align-items: center;
+		padding: 2rem 0;
+	}
+
+	.container .modal__enter-pledge-active {
+		display: flex;
+	}
+
+	.confirm-container {
+		padding: 55% 0;
+	}
+
+	.confirm-container .confirm-modal {
+		width: 40%;
+	}
+}
+
+/*# sourceMappingURL=style.css.map */

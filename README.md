@@ -5,7 +5,7 @@ This is a solution to the [Product preview card component challenge on Frontend 
 ### Links
 
 - Solution URL: [GitHub](https://github.com/Mihalg/-Crowdfunding-product-page)
-- Live Site URL: [](https://mihalg.github.io/-Crowdfunding-product-page/)
+- Live Site URL: [Solution](https://mihalg.github.io/-Crowdfunding-product-page/)
 
 ## Author
 
